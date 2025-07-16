@@ -1,7 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './plugin-app';
 
 import '../shared/style.css';
 
-ReactDOM.render(<App stats={window.stats} />, document.getElementById('App'));
+const container = document.getElementById('App');
+const root = createRoot(container);
+
+root.render(<App stats={window.stats} />);
