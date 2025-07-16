@@ -21,7 +21,7 @@
         "statistics",
         "bundle",
         "chunks"
-      ],
+    ],
     "license": "MIT",
     "files": [
         "lib",
@@ -35,6 +35,7 @@
         "build": "npm run build:site && npm run build:plugin",
         "build:plugin": "shx rm -rf ./lib/** && webpack --config ./webpack/plugin/webpack.prod.js && babel ./src/plugin/plugin.js --out-file lib/plugin.js --presets=@babel/preset-env",
         "build:site": "webpack --config ./webpack/site/webpack.prod.js",
+        "build:stats": "webpack --config ./webpack/plugin/webpack.prod.js --json > demo_stats/stats-demo.json",
         "start:plugin": "webpack serve --config ./webpack/plugin/webpack.dev.js",
         "start:site": "webpack serve --config ./webpack/site/webpack.dev.js",
         "lint": "eslint src --ext .js,.jsx",
