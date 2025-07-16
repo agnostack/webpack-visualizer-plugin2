@@ -1,3 +1,4 @@
+demo_stats
 dist-site
 lib
 node_modules
@@ -5,3 +6,4 @@ npm-debug.log
 package-lock.json
 .vscode
 yarn.lock
+pnpm-lock.yaml
